@@ -2,8 +2,8 @@ require('dotenv').config();
 
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
-      host: process.env.DB_HOST,
+const sequelize = new Sequelize("my_tech_blog_db", "admin", "Createyour1", {
+      host: "database-1.cohesbi5e4hv.us-east-2.rds.amazonaws.com",
       dialect: 'mysql',
       dialectOptions: {
         decimalNumbers: true,
