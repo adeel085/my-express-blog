@@ -1,3 +1,4 @@
 node_modules
 .env
+old.env
 .DS_Store
