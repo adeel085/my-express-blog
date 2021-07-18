@@ -1,0 +1,42 @@
+{{> header}}
+
+<div class="page-content">
+    <div class="post">
+        <div class="post-head">
+            <span class="post-title">{{post.title}}</span>
+            <div class="post-meta">
+                Posted by {{post.user.username}} on {{post.date}}
+            </div>
+        </div>
+        <div class="post-body">
+            {{post.content}}
+        </div>
+    </div>
+
+    <div class="comment-section">
+        {{#if loggedIn}}
+            <h4>Comment Section</h4>
+            <form method="POST" action="{{baseURL}}/blogpost/comment/">
+                <input type="hidden" name="postId" value="{{post.id}}" />
+                <textarea placeholder="Leave a comment..." name="comment" style="width: 500px; max-width: 100%;" rows="5"></textarea>
+                <br/>
+                <input type="submit" value="Post Comment">
+            </form>
+            <hr style="margin: 10px 0px;"/>
+        {{/if}}
+
+        <div>
+            <h4>Comments</h4>
+            {{#each post.comments}}
+                <div class="comment-box">
+                    {{dataValues.text}}
+                    <div class="comment-meta">
+                        __ {{dataValues.user.username}}, {{dataValues.date}}
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+{{> footer}}

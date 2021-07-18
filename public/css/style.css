@@ -1,0 +1,133 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f1f1f1;
+}
+input, textarea, button {
+    padding: 5px;
+    outline: 0;
+}
+.text-center {
+    text-align: center;
+}
+.flex {
+    display: flex;
+}
+.align-items-center {
+    align-items: center;
+}
+.justify-content-center {
+    justify-content: center;
+}
+a {
+    text-decoration: none !important;
+}
+nav {
+    padding: 20px;
+    box-shadow: 1px 1px 8px #e8e8e8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+nav .nav-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav .nav-links-list>li {
+    padding: 2px 10px;
+}
+nav .logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+.form-box {
+    width: 400px;
+    max-width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+fieldset {
+    border: none;
+    margin-bottom: 10px;
+}
+fieldset label {
+    display: block;
+    margin-bottom: 2px;
+}
+fieldset input {
+    width: 100%;
+}
+fieldset input[type='text'], fieldset input[type='password'] {
+    width: calc(100% - 10px);
+}
+.page-content {
+    padding: 40px;
+}
+.tabbed-pane-header {
+    display: flex;
+}
+.tabbed-pane-header > .tab-nav {
+    flex: 1;
+    text-align: center;
+    background-color: #fff;
+    padding: 8px;
+    border-right: 1px solid #c5c5c5;
+    cursor: pointer;
+    border-bottom: 1px solid #c5c5c5;
+}
+.tabbed-pane-header > .tab-nav:last-child {
+    border-right: none;
+}
+.tabbed-pane-header > .tab-nav.selected {
+    font-weight: bold;
+}
+.tabbed-pane-body {
+    background-color: #fff;
+}
+.tabbed-pane-body .tab-content {
+    display: none;
+    padding: 8px;
+}
+.tabbed-pane-body .tab-content.selected {
+    display: block;
+}
+.post {
+    border: 2px solid #203a69;
+    margin-bottom: 10px;
+    display: block;
+}
+.post.clickable {
+    cursor: pointer;
+}
+.post .post-head {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #203a69;
+    padding: 5px;
+}
+.post .post-head .post-meta {
+    font-size: 12px;
+}
+.post .post-body {
+    padding: 5px;
+    color: #222;
+}
+.post-editor {
+    margin-bottom: 20px;
+}
+.comment-box {
+    border-bottom: 1px solid #203a69;
+    padding: 10px 0;
+}
+.comment-box .comment-meta {
+    font-size: 12px;
+    margin-top: 8px;
+}

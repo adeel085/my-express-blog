@@ -1,0 +1,30 @@
+{{> header}}
+
+<div class="flex align-items-center justify-content-center" style="height: calc(100vh - 66px);">
+    <div class="form-box">
+        <h2 class="text-center">Login</h2>
+        <form action="{{baseURL}}/login" method="POST">
+            <fieldset>
+                <label>Username</label>
+                <input type="text" name="username" required="" />
+            </fieldset>
+            
+            <fieldset>
+                <label>Password</label>
+                <input type="password" name="password" required="" />
+            </fieldset>
+
+            <fieldset>
+                <input type="submit" value="Login">
+            </fieldset>
+        </form>
+        <center>
+            <span>
+                Don't have an account? <a href="{{baseURL}}/signup">Signup Here</a>
+            </span>
+        </center>
+    </div>
+</div>
+
+
+{{> footer}}

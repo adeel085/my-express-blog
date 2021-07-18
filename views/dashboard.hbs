@@ -1,0 +1,59 @@
+{{> header}}
+
+<div class="page-content">
+    <div class="tabbed-pane">
+        <div class="tabbed-pane-header">
+            <div class="tab-nav selected" data-target="my-posts-tab">
+                My Posts
+            </div>
+            <div class="tab-nav" data-target="create-posts-tab">
+                Create Posts
+            </div>
+        </div>
+
+        <div class="tabbed-pane-body">
+            <div class="tab-content selected" id="my-posts-tab">
+                {{#each posts}}
+                    <div class="post clickable" data-id="{{dataValues.id}}">
+                        <div class="post-head">
+                            <span class="post-title">{{dataValues.title}}</span>
+                            <div class="post-meta">
+                                Posted by {{dataValues.user.username}} on {{dataValues.date}}
+                            </div>
+                        </div>
+                        <div class="post-body">
+                            {{dataValues.content}}
+                        </div>
+                    </div>
+                    <div class="post-editor" data-id="{{dataValues.id}}" style="display: none;">
+                        <form action="{{baseURL}}/dashboard/blogpost/edit/{{dataValues.id}}" method="POST">
+                            <h4>Post Title</h4>
+                            <input type="text" value="{{dataValues.title}}" name="postTitle" style="width: 400px; max-width: 100%;" required="" />
+                            <h4>Post Content</h4>
+                            <textarea name="postContent" style="width: 400px; max-width: 100%;" rows="10" required="">{{dataValues.content}}</textarea>
+                            <br/>
+                            <input type="hidden" value="{{dataValues.id}}" />
+                            <input type="submit" value="Edit" />
+                            <button type="button" class="delete-post-btn" data-id="{{dataValues.id}}">Delete</button>
+                        </form>
+                    </div>
+                {{/each}}
+            </div>
+
+            <div class="tab-content" id="create-posts-tab">
+                <form action="{{baseURL}}/dashboard/blogpost" method="POST">
+                    <h4>Post Title</h4>
+                    <input type="text" name="postTitle" style="width: 500px; max-width: 100%; outline: 0;" required="">
+
+                    <h4>Post Content</h4>
+                    <textarea name="postContent" style="width: 500px; max-width: 100%; outline: 0;" rows="10" required=""></textarea>
+
+                    <br/>
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer}}

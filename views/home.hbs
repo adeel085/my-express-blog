@@ -1,0 +1,19 @@
+{{> header}}
+
+<div class="page-content">
+    {{#each posts}}
+        <a class="post" href="{{baseURL}}/blogpost/{{dataValues.id}}">
+            <div class="post-head">
+                <span class="post-title">{{dataValues.title}}</span>
+                <div class="post-meta">
+                    Posted by {{dataValues.user.username}} on {{dataValues.date}}
+                </div>
+            </div>
+            <div class="post-body">
+                {{dataValues.content}}
+            </div>
+        </a>
+    {{/each}}
+</div>
+
+{{> footer}}

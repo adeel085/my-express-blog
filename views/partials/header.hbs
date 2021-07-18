@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home | My Tech Blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="{{baseURL}}/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                My Tech Blog
+            </div>
+            <div>
+                <ul class="nav-links-list">
+                    <li>
+                        <a href="{{baseURL}}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{baseURL}}/dashboard">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="{{baseURL}}/login">Login</a>
+                    </li>
+                    {{#if loggedIn}}
+                    <li>
+                        <a href="{{baseURL}}/logout">Logout</a>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+        </nav>
