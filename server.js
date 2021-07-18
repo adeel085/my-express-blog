@@ -10,7 +10,7 @@ const saltRounds = 10;
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const baseURL = "http://localhost:" + PORT;
+const baseURL = "https://my-tech-blog-85.herokuapp.com/";
 
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials')
